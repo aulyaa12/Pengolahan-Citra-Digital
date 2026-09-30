@@ -1,0 +1,82 @@
+{
+  "detail": [
+    {
+      "ijazah": "ui",
+      "metode": "Asli (sebelum)",
+      "ocr_text": "Nomor yazah: 571012022000056",
+      "akurasi": 75.0
+    },
+    {
+      "ijazah": "ui",
+      "metode": "Brightness Adjustment",
+      "ocr_text": "Nomor yazah: 571012022000056",
+      "akurasi": 75.0
+    },
+    {
+      "ijazah": "ui",
+      "metode": "Contrast Stretching",
+      "ocr_text": "Nomor yazah: 571012022000056",
+      "akurasi": 75.0
+    },
+    {
+      "ijazah": "ui",
+      "metode": "Histogram Equalization",
+      "ocr_text": "",
+      "akurasi": 0.0
+    },
+    {
+      "ijazah": "sriwijaya",
+      "metode": "Asli (sebelum)",
+      "ocr_text": "",
+      "akurasi": 0.0
+    },
+    {
+      "ijazah": "sriwijaya",
+      "metode": "Brightness Adjustment",
+      "ocr_text": "",
+      "akurasi": 0.0
+    },
+    {
+      "ijazah": "sriwijaya",
+      "metode": "Contrast Stretching",
+      "ocr_text": "",
+      "akurasi": 0.0
+    },
+    {
+      "ijazah": "sriwijaya",
+      "metode": "Histogram Equalization",
+      "ocr_text": "",
+      "akurasi": 0.0
+    },
+    {
+      "ijazah": "airlangga",
+      "metode": "Asli (sebelum)",
+      "ocr_text": "| No Ijazah : 7834/001004/07, 3/51/2015",
+      "akurasi": 78.26086956521739
+    },
+    {
+      "ijazah": "airlangga",
+      "metode": "Brightness Adjustment",
+      "ocr_text": "| No Tjazah : 7834/00 1004/07, 3/S1L2018",
+      "akurasi": 76.59574468085107
+    },
+    {
+      "ijazah": "airlangga",
+      "metode": "Contrast Stretching",
+      "ocr_text": "| No Ijazah : 7834/001004/07, 3/S1L2015",
+      "akurasi": 80.85106382978722
+    },
+    {
+      "ijazah": "airlangga",
+      "metode": "Histogram Equalization",
+      "ocr_text": "",
+      "akurasi": 0.0
+    }
+  ],
+  "ringkasan": {
+    "Asli (sebelum)": 51.086956521739125,
+    "Brightness Adjustment": 50.53191489361702,
+    "Contrast Stretching": 51.95035460992907,
+    "Histogram Equalization": 0.0
+  }
+}
