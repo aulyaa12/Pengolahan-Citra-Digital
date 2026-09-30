@@ -27,7 +27,6 @@ Tugas06 Deteksi Tanda Tangan Ijazah/
 ├── code_signature_detection.py # Skrip utama deteksi tanda tangan & analisis
 ├── hasil_deteksi.xlsx          # Rekapitulasi kuantitatif & hasil klasifikasi Excel
 └── README.md                   # Dokumentasi ringkas & penjelasan analisis
-
 ```
 
 ## Cara Menjalankan Program
@@ -36,22 +35,20 @@ Tugas06 Deteksi Tanda Tangan Ijazah/
 
 ```bash
 pip install opencv-python numpy matplotlib pandas openpyxl
-
 ```
 
 2. **Menyiapkan Data Uji (Opsional)**
 
 ```bash
 python buat_data_uji.py
-
 ```
 
 *Skrip ini akan menyiapkan file citra uji baik yang memiliki tanda tangan maupun yang tidak memiliki tanda tangan (_NonTTD).*
+
 3. **Eksekusi Program Utama**
 
 ```bash
 python code_signature_detection.py
-
 ```
 
 *Program akan memotong area ROI, mengaplikasikan thresholding dan operasi morfologi, menentukan status SIGNATURE PRESENT atau SIGNATURE ABSENT, serta mengeksport laporan ke hasil_deteksi.xlsx dan citra ke folder hasil_deteksi/.*
