@@ -1,16 +1,10 @@
-
-```markdown
-# ANALISIS HISTOGRAM DAN IDENTIFIKASI PERMASALAHAN KUALITAS CITRA DOKUMEN IJAZAH MENGGUNAKAN METODE GRAYSCALE, HISTOGRAM EQUALIZATION, DAN CLAHE
+### ANALISIS HISTOGRAM DAN IDENTIFIKASI PERMASALAHAN KUALITAS CITRA DOKUMEN IJAZAH MENGGUNAKAN METODE GRAYSCALE, HISTOGRAM EQUALIZATION, DAN CLAHE
 
 Repositori ini berisi penyelesaian **Tugas Pertemuan 3** mata kuliah Pengolahan Citra Digital untuk menganalisis karakteristik citra ijazah, distribusi intensitas piksel melalui histogram, serta evaluasi metode peningkatan kualitas citra (*image enhancement*).
-
----
 
 ## Deskripsi & Studi Kasus
 
 Studi kasus pada penelitian ini menggunakan sembilan citra dokumen ijazah (`ijazah1.jpg` hingga `ijazah9.jpg`) yang diambil dalam kondisi pencahayaan dan kualitas yang berbeda-beda. Setiap citra dikonversi dari RGB ke *grayscale*, kemudian dianalisis histogramnya untuk mengidentifikasi permasalahan seperti citra terlalu terang, terlalu gelap, kontras rendah, pencahayaan tidak merata, atau *noise*, sebelum ditentukan metode *enhancement* yang paling sesuai untuk masing-masing citra.
-
----
 
 ## 📁 Struktur Folder Proyek
 
@@ -28,14 +22,12 @@ Studi kasus pada penelitian ini menggunakan sembilan citra dokumen ijazah (`ijaz
 
 ```bash
 pip install opencv-python numpy matplotlib
-
 ```
 
 2. **Eksekusi Program**
 
 ```bash
 python Analisis_Citra_Ijazah.py
-
 ```
 
 *Seluruh grafik histogram dan citra hasil olahan akan tersimpan secara otomatis di dalam folder `output/`.*
