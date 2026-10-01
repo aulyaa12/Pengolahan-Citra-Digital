@@ -57,7 +57,7 @@ python code_signature_detection.py
 
 ### 1. Mengapa diperlukan ambang batas (thresholding) sebelum melakukan analisis keberadaan tanda tangan?
 
-> **Jawaban:**
+**Jawaban:**
 
 Komputer tidak dapat mengukur luas atau menghitung jumlah piksel objek dari citra grayscale yang memiliki variasi intensitas warna (0–255). Proses thresholding (binarisasi) diperlukan untuk memisahkan goresan tinta tanda tangan dari latar belakang kertas ijazah secara tegas menjadi format biner (0 dan 1).
 
@@ -65,7 +65,7 @@ Setelah citra menjadi biner, variasi bayangan dan pencahayaan kertas otomatis te
 
 ### 2. Apa masalah yang terjadi jika ambang batas (thresholding) terlalu tinggi atau terlalu rendah?
 
-> **Jawaban:**
+**Jawaban:**
 
 * **Jika Ambang Batas Terlalu Tinggi (*Over-thresholding*):**
   Piksel latar belakang kertas yang redup atau berbayangan akan keliru terdeteksi sebagai tinta. Hal ini memunculkan banyak *noise* hitam pekat yang membuat citra tanpa tanda tangan salah terdeteksi sebagai **`SIGNATURE PRESENT`** (*False Positive*).

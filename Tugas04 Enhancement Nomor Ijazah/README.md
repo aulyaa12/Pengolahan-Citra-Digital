@@ -21,7 +21,6 @@ Tugas_4_Enhancement_Nomor_Ijazah/
 └── README.md                   # Dokumentasi ringkas & hasil analisis
 ```
 
-
 ## Cara Menjalankan Program
 
 1. **Instalasi Pustaka**
@@ -42,8 +41,8 @@ python Enhancement_NoIjazah.py
 
 ### 1. Mengapa Peningkatan Contrast Dapat Membantu OCR Mengenali Karakter Nomor Ijazah?
 
-> **Jawaban:**
-> OCR mengenali karakter berdasarkan perbedaan intensitas piksel antara tulisan dan latar belakang. Pada citra berkontras rendah, selisih intensitas ini kecil sehingga tepi karakter kabur dan sulit dipisahkan secara numerik. Peningkatan *contrast* memperbesar selisih tersebut, membuat tepi karakter lebih tajam sehingga proses binarisasi/thresholding pada OCR bisa memisahkan tulisan dari latar dengan lebih akurat, dan bentuk karakter yang terbentuk lebih mudah dikenali.
+**Jawaban:**
+OCR mengenali karakter berdasarkan perbedaan intensitas piksel antara tulisan dan latar belakang. Pada citra berkontras rendah, selisih intensitas ini kecil sehingga tepi karakter kabur dan sulit dipisahkan secara numerik. Peningkatan *contrast* memperbesar selisih tersebut, membuat tepi karakter lebih tajam sehingga proses binarisasi/thresholding pada OCR bisa memisahkan tulisan dari latar dengan lebih akurat, dan bentuk karakter yang terbentuk lebih mudah dikenali.
 
 **Bukti Eksperimen:**
 Ketiga citra asli memiliki histogram yang menumpuk sempit (kontras rendah). Namun, setelah *contrast stretching* meregangkan histogram tersebut ke rentang $0–255$, tulisan pada ketiga sampel tampak lebih tegas secara visual. Pada Ijazah Airlangga, perbaikan ini bahkan terbukti kuantitatif, skor OCR naik dari **78,3% (asli)** menjadi **80,9% (tertinggi di antara semua metode)**. Ini menunjukkan bahwa penajaman selisih intensitas tulisan-latar benar-benar membantu OCR mengenali karakter dengan lebih akurat.

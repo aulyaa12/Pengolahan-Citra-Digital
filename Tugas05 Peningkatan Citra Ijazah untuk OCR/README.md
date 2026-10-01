@@ -39,8 +39,8 @@ python analisis_citra_ijazah.py
 
 ### 1. Mengapa Median Filter Dapat Memberikan Hasil OCR yang Lebih Baik pada Citra yang Mengandung Salt and Pepper Noise?
 
-> **Jawaban:**
-> Median Filter bekerja dengan mengganti setiap piksel menggunakan nilai tengah (median) dari piksel-piksel di sekitarnya dalam suatu jendela kecil. Karena *noise salt and pepper* selalu bernilai ekstrem (sangat terang atau sangat gelap), nilai tersebut akan selalu berada di posisi paling ujung setelah diurutkan, sehingga hampir tidak pernah terpilih sebagai median dan otomatis terbuang, sementara bentuk tepi karakter di sekitarnya tetap terjaga.
+**Jawaban:**
+Median Filter bekerja dengan mengganti setiap piksel menggunakan nilai tengah (median) dari piksel-piksel di sekitarnya dalam suatu jendela kecil. Karena *noise salt and pepper* selalu bernilai ekstrem (sangat terang atau sangat gelap), nilai tersebut akan selalu berada di posisi paling ujung setelah diurutkan, sehingga hampir tidak pernah terpilih sebagai median dan otomatis terbuang, sementara bentuk tepi karakter di sekitarnya tetap terjaga.
 
 Berbeda halnya dengan *Mean Filter* dan *Gaussian Filter* yang bekerja dengan menghitung rata-rata dari seluruh piksel dalam jendela, sehingga nilai ekstrem dari *noise* tetap ikut tercampur dalam perhitungan dan hanya menyebar menjadi kekaburan, bukan benar-benar hilang. Sifat Median Filter yang mampu menghilangkan *noise* sekaligus mempertahankan ketajaman tepi karakter inilah yang membuatnya lebih unggul dibanding Mean dan Gaussian Filter pada citra ber-*noise* acak. Hal ini sejalan dengan hasil pengujian pada **Citra 4**, di mana Median Filter tetap menghasilkan tampilan paling bersih di antara metode lain dan berhasil mempertahankan **akurasi OCR sebesar 100%**.
 
