@@ -57,24 +57,17 @@ python code_signature_detection.py
 
 ### 1. Mengapa diperlukan ambang batas (thresholding) sebelum melakukan analisis keberadaan tanda tangan?
 
-**Jawaban:**
+> **Jawaban:**
 
-Komputer tidak memiliki kemampuan persepsi visual seperti manusia untuk mengenali bentuk atau keberadaan objek langsung dari citra *grayscale* yang memiliki rentang intensitas bertingkat (0–255). Proses *thresholding* (binarisasi) sangat diperlukan untuk memisahkan objek tinta tanda tangan secara tegas dari latar belakang kertas ijazah. Melalui pemisahan ini, piksel gelap tinta diubah menjadi *foreground* (1), sedangkan piksel terang kertas menjadi *background* (0), sehingga perbedaan intensitas yang bervariasi akibat pencahayaan atau bayangan dapat dieliminasi secara objektif.
+Komputer tidak dapat mengukur luas atau menghitung jumlah piksel objek dari citra grayscale yang memiliki variasi intensitas warna (0–255). Proses thresholding (binarisasi) diperlukan untuk memisahkan goresan tinta tanda tangan dari latar belakang kertas ijazah secara tegas menjadi format biner (0 dan 1).
 
-Setelah citra berhasil diubah menjadi format biner, komputer baru dapat melakukan pemrosesan tingkat lanjut dan ekstraksi fitur secara presisi. Citra biner ini menjadi landasan wajib untuk menjalankan operasi morfologi seperti *Opening* (pembersihan *noise*) dan *Closing* (penyambungan goresan terputus). Selain itu, binarisasi memungkinkan komputer menghitung parameter kuantitatif secara pasti—seperti total jumlah piksel *foreground* dan luas area tanda tangan—yang menjadi dasar utama penentuan keputusan aturan klasifikasi `SIGNATURE PRESENT` atau `SIGNATURE ABSENT`.
-
----
+Setelah citra menjadi biner, variasi bayangan dan pencahayaan kertas otomatis tereliminasi. Hal ini memungkinkan komputer melakukan operasi morfologi ( *Opening/Closing* ) untuk membersihkan *noise* serta menghitung jumlah piksel *foreground* secara pasti sebagai dasar keputusan `SIGNATURE PRESENT` atau `SIGNATURE ABSENT`.
 
 ### 2. Apa masalah yang terjadi jika ambang batas (thresholding) terlalu tinggi atau terlalu rendah?
 
-**Jika Ambang Batas Terlalu Tinggi (*Over-thresholding*):**
+> **Jawaban:**
 
-Nilai piksel batas yang ditetapkan terlalu mendekati nilai maksimum (255).
-
-**Dampak:** Piksel latar belakang kertas yang sedikit redup atau memiliki bayangan tipis akan keliru terdeteksi sebagai piksel *foreground* (tinta). Hal ini menyebabkan munculnya banyak *noise* hitam pekat yang membuat citra tanpa tanda tangan keliru terdeteksi sebagai **`SIGNATURE PRESENT`** (*False Positive*).
-
-**Jika Ambang Batas Terlalu Rendah (*Under-thresholding*):**
-
-Nilai piksel batas yang ditetapkan terlalu mendekati nilai minimum (0).
-
-**Dampak:** Hanya goresan tinta yang sangat hitam pekat yang terdeteksi. Goresan halus, tipis, atau warna tinta yang agak pudar pada tanda tangan asli akan terpotong dan terhapus (dianggap sebagai latar belakang). Akibatnya, jumlah piksel *foreground* menjadi sangat kecil dan citra yang memiliki tanda tangan keliru terdeteksi sebagai **`SIGNATURE ABSENT`** (*False Negative*).
+* **Jika Ambang Batas Terlalu Tinggi (*Over-thresholding*):**
+  Piksel latar belakang kertas yang redup atau berbayangan akan keliru terdeteksi sebagai tinta. Hal ini memunculkan banyak *noise* hitam pekat yang membuat citra tanpa tanda tangan salah terdeteksi sebagai **`SIGNATURE PRESENT`** (*False Positive*).
+* **Jika Ambang Batas Terlalu Rendah (*Under-thresholding*):**
+  Hanya goresan tinta yang sangat hitam pekat yang terdeteksi, sedangkan garis halus atau pudar akan terhapus. Akibatnya, jumlah piksel *foreground* menjadi sangat kecil dan citra yang bertanda tangan salah terdeteksi sebagai **`SIGNATURE ABSENT`** (*False Negative*).
