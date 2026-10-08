@@ -1,12 +1,3 @@
-"""
-Prototype verifikasi ijazah: OCR nomor ijazah + deteksi tanda tangan (Batch Folder).
-
-Pipeline per gambar:
-  Citra -> Grayscale -> Enhancement -> [Area Nomor -> Enhancement -> OCR]
-                                       [Area TTD -> Threshold -> Morfologi -> Deteksi]
-        -> Hasil Verifikasi
-"""
-
 import glob
 import os
 import re
